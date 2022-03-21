@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>HTML Table Format</title>
+<style>
+	table {
+	border: 2px solid black;
+	}
+	tr,td,th {
+	border: 1px solid black;
+	}
+	.font {
+	font-family:Courier New
+	}
+</style>
+</head>
+<body>
+<table style="width:100%">
+  <tr>
+    <th rowspan="3">Day</th >
+    <th colspan="3">seminar</th>
+    
+  </tr>
+  <tr>
+    <th colspan="2">Schedule</th>
+    <th rowspan="2"> Topic</th>
+  </tr>
+  <tr>
+    <th>Begin</th>
+    <th>End</th>
+  </tr>
+  <tr class="font">
+    <th rowspan="2">Monday</th>
+    <th rowspan="2">8:00a.m</th>
+    <th rowspan="2">5:00p.m</th>
+    <th>Introduction to XML </th>
+  </tr>
+  <tr class="font">
+    <th>Validity:DTD and relax NG</th>
+  </tr>
+  <tr class="font">
+    <th rowspan="3">Tuesday</th>
+    <th>8:00a.m</th>
+    <th>11:00a.m</th>
+    <th rowspan="2"colspan="3">XPath </th>
+  </tr>
+  <tr class="font">
+    <th>11:00a.m</th>
+    <th>2:00p.m </th>
+  </tr>
+  <tr class="font">
+     <th>2:00p.m</th>
+    <th>5:00p.m </th>
+   <th>XSL Transformations</th>
+ </tr>
+  <tr class="font">
+    <th>Wednesday</th>  
+    <th>8:00p.m</th>
+    <th>12:00p.m </th>
+    <th>XSL Formatting Objects</th>
+ 
+  </tr>
+</table>
+</body>
+</html>
