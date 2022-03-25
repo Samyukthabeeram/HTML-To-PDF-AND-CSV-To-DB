@@ -7,7 +7,7 @@ create table insurance_estimate_doctor_hospital (id int(10) unsigned primary key
 create table insurance_estimate_conversation (id int(10) unsigned primary key auto_increment, insurance_estimate_id int(10) unsigned not null, event varchar(100) not null, token varchar(100) not null, foreign key(insurance_estimate_id) references insurance_estimate(id));
 
 
-create table insurance_estimate_conversation_message (id int(10) unsigned primary key auto_increment, insurance_estimate_conversation_id int(10) unsigned not null, message varchar(100) not null, foreign key(insurance_estimate_conversation_id) references insurance_estimate_conversation(id));
+create table insurance_estimate_conversation_message (id int(10) unsigned primary key auto_increment, insurance_estimate_conversation_id int(10) unsigned not null, message varchar(100) not null, foreign key(insurance_estimate_conversation_id) references insurance_estimate_conversation(insurance_estimate_id));
 
 
-create table insurance_estimate_conversation_document (id int(10) unsigned primary key auto_increment, insurance_estimate_conversation_id int(10) unsigned not null, document_url varchar(100) not null, foreign key(insurance_estimate_conversation_id) references insurance_estimate_conversation(id));
+create table insurance_estimate_conversation_document (id int(10) unsigned primary key auto_increment, insurance_estimate_conversation_id int(10) unsigned not null, document_url varchar(100) not null, foreign key(insurance_estimate_conversation_id) references insurance_estimate_conversation(insurance_estimate_id));
